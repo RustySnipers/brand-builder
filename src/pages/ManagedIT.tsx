@@ -6,12 +6,11 @@ import { Shield, Server, Check, X, ArrowRight, AlertCircle, Clock } from "lucide
 
 const planFeatures = [
   { feature: "RMM Agent (Auto-patching)", sentinel: true, server: true },
-  { feature: "Managed Antivirus", sentinel: true, server: true },
+  { feature: "Managed AV (client provided)", sentinel: true, server: true },
   { feature: "Weekly Log Review", sentinel: true, server: true },
   { feature: "24/7 Uptime Monitoring", sentinel: true, server: true },
   { feature: "Firmware Management", sentinel: true, server: true },
   { feature: "Offsite Cloud Backup", sentinel: false, server: true },
-  { feature: "Priority Response", sentinel: false, server: true },
 ];
 
 export default function ManagedIT() {
@@ -152,7 +151,7 @@ export default function ManagedIT() {
             </div>
 
             <div className="bg-muted rounded-lg p-6 mb-8">
-              <h3 className="font-semibold text-foreground mb-4">Support is NOT free with managed plans.</h3>
+              <h3 className="font-semibold text-foreground mb-4">Support is NOT free.</h3>
               <p className="text-muted-foreground mb-4">
                 Many managed IT providers include "unlimited support" which leads to bloated pricing and incentivizes poor service. We take a different approach:
               </p>
@@ -163,7 +162,7 @@ export default function ManagedIT() {
                 </li>
                 <li className="flex items-start gap-2">
                   <Clock className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>Reactive support IS billed:</strong> Troubleshooting calls, on-site visits, and major issue resolution at <strong>$85/hr</strong> (discounted from $125/hr standard rate).</span>
+                  <span><strong>Reactive support is billed at the discounted rate: $85/hr</strong> (vs. $125/hr standard). This includes troubleshooting calls, on-site visits, and major issue resolution.</span>
                 </li>
               </ul>
             </div>

@@ -10,8 +10,11 @@ export function CTABand() {
           <h2 className="text-3xl lg:text-4xl font-bold text-accent-foreground mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-lg text-accent-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-accent-foreground/90 mb-6 max-w-2xl mx-auto">
             Whether you need a quick fix or ongoing IT support, we're here to help. Reach out today for transparent pricing and reliable service.
+          </p>
+          <p className="text-sm text-accent-foreground/70 mb-8 max-w-xl mx-auto">
+            Managed plans include proactive maintenance. Support is billed separately at a discounted $85/hr.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild variant="hero" size="xl">
