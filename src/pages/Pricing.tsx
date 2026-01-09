@@ -11,15 +11,15 @@ import {
 import { ArrowRight, Clock, CreditCard, Calendar, AlertCircle } from "lucide-react";
 
 const residentialPricing = [
-  { service: "Diagnostic / Bench Fee", price: "$49", note: "Waived if repair approved" },
-  { service: "PC Tune-Up & Optimization", price: "$99", note: "" },
-  { service: "Virus & Threat Remediation", price: "$129", note: "" },
-  { service: 'OS "Fresh Start" Re-install', price: "$129", note: "Data backup extra" },
-  { service: "Data Recovery (Tier 1)", price: "$149", note: "Software-based only" },
-  { service: "Laptop Screen Replacement", price: "$89", note: "Labor only; parts extra" },
-  { service: "Hardware Component Install", price: "$59", note: "RAM, GPU, or SSD" },
-  { service: "Custom PC Build / Rebuild", price: "$149", note: "" },
-  { service: "Data Migration", price: "$99", note: "Up to 1TB" },
+  { service: "Diagnostic / Bench Fee", price: "$49", note: "Full hardware scan & error log review. Waived if repair approved." },
+  { service: "PC Tune-Up & Optimization", price: "$99", note: "Bloatware removal, OS updates, startup optimization, temp file cleanup." },
+  { service: "Virus & Threat Remediation", price: "$129", note: "Deep scan remediation, browser reset, basic protection install." },
+  { service: 'OS "Fresh Start" Re-install', price: "$129", note: "Windows/Linux install, driver updates, basic setup. Data backup extra." },
+  { service: "Data Recovery (Tier 1)", price: "$149", note: "Software-based only. If mechanical failure, refer to a lab." },
+  { service: "Laptop Screen Replacement", price: "$89", note: "Labor only. Client pays for the screen part cost upfront." },
+  { service: "Hardware Component Install", price: "$59", note: "RAM, GPU, or SSD. Includes driver verification." },
+  { service: "Custom PC Build / Rebuild", price: "$149", note: "Assembly, cable management, BIOS config, stress testing." },
+  { service: "Data Migration", price: "$99", note: "Moving data from old PC to new PC (up to 1TB)." },
 ];
 
 const businessRates = [
@@ -30,10 +30,10 @@ const businessRates = [
 ];
 
 const projectPricing = [
-  { service: "Network Setup", price: "$750+", note: "Firewall, WiFi, DNS, printers" },
-  { service: 'Security Audit ("The Fortress Check")', price: "$499", note: "Full vulnerability assessment" },
-  { service: "Cloud Migration", price: "$999+", note: "SharePoint/OneDrive/Azure" },
-  { service: "Automation Script", price: "$500+", note: "Custom Python/PowerShell" },
+  { service: "Network Setup", price: "$750+", note: "Firewall config (Ubiquiti/Meraki), guest WiFi isolation, secure DNS, printer mapping." },
+  { service: 'Security Audit ("The Fortress Check")', price: "$499", note: "Vulnerability scan, password policy review, 2FA setup, risk report." },
+  { service: "Cloud Migration", price: "$999+", note: "Moving local files to SharePoint/OneDrive/Azure. Includes backup setup." },
+  { service: "Automation Script", price: "$500+", note: "Custom Python/PowerShell scripts to automate workflows (e.g., auto-filing invoices)." },
 ];
 
 const managedPlans = [
@@ -43,23 +43,21 @@ const managedPlans = [
     unit: "/device/month",
     features: [
       "RMM agent: auto-patching Windows & apps",
-      "Managed AV: enterprise-grade protection",
+      "Managed AV: enterprise-grade (client provided)",
       "Weekly automated log review",
       "24/7 uptime monitoring",
       "Firmware management",
     ],
-    note: "Support calls billed at discounted rate: $85/hr",
+    note: "Support is NOT free. Reactive support billed at discounted rate: $85/hr.",
   },
   {
     name: "Server / Network",
     price: "$150",
     unit: "/device/month",
     features: [
-      "Everything in Tech Sentinel",
       "Offsite cloud backup management",
-      "Priority response",
     ],
-    note: "Major outages/restores billed at discounted rate: $85/hr",
+    note: "Support is NOT free. Major outages/restores billed at discounted rate: $85/hr.",
   },
 ];
 

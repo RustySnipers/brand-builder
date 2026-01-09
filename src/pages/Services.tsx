@@ -56,8 +56,8 @@ export default function Services() {
   return (
     <Layout>
       <Helmet>
-        <title>IT Services | J. Brand Technologies</title>
-        <meta name="description" content="PC repair, cybersecurity, and business IT services in Central Michigan. Fixed-price residential services and project-based business solutions." />
+        <title>IT Services | J. Brand Technologies | Midland, Gladwin & Clare Counties</title>
+        <meta name="description" content="PC repair, cybersecurity, and business IT services in Midland, Gladwin, & Clare Counties. Serving the Sanford, MI area with fixed-price residential services and project-based business solutions." />
         <link rel="canonical" href="https://jbrandtech.com/services" />
       </Helmet>
 
