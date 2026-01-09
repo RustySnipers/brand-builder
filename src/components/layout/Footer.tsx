@@ -28,7 +28,7 @@ export function Footer() {
           {/* Brand & Contact */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src={Logo} alt="J. Brand Technologies" className="h-10 w-auto brightness-0 invert" />
+              <img src={Logo} alt="J. Brand Technologies" className="h-10 w-auto" />
               <span className="font-semibold text-lg">J. Brand Technologies</span>
             </Link>
             <p className="text-primary-foreground/80 text-sm mb-6">
