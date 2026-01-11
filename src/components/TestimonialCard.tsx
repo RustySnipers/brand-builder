@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 interface TestimonialProps {
   quote: string;
@@ -19,13 +20,14 @@ export function TestimonialCard({
   avatarInitials,
   className,
 }: TestimonialProps) {
+  const prefersReducedMotion = useReducedMotion();
   const initials = avatarInitials || name.split(" ").map(n => n[0]).join("").toUpperCase();
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.5 }}
       viewport={{ once: true }}
       className={cn(
         "relative p-6 lg:p-8 rounded-2xl bg-surface-container border border-outline/20",

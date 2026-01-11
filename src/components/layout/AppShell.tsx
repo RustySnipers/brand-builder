@@ -1,6 +1,7 @@
 import { ReactNode, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import {
   Home,
   Briefcase,
@@ -43,6 +44,11 @@ export function AppShell({ children }: AppShellProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const location = useLocation();
+  const prefersReducedMotion = useReducedMotion();
+  
+  const drawerTransition = prefersReducedMotion
+    ? { duration: 0 }
+    : { type: "spring" as const, damping: 25, stiffness: 300 };
 
   const isActive = (href: string) => {
     if (href === "/") return location.pathname === "/";
@@ -154,10 +160,10 @@ export function AppShell({ children }: AppShellProps) {
               className="lg:hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm"
             />
             <motion.aside
-              initial={{ x: "-100%" }}
+              initial={prefersReducedMotion ? { x: 0 } : { x: "-100%" }}
               animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              exit={prefersReducedMotion ? { x: 0 } : { x: "-100%" }}
+              transition={drawerTransition}
               className="lg:hidden fixed left-0 top-0 bottom-0 z-50 w-[280px] bg-surface-container"
             >
               <div className="h-14 flex items-center justify-between px-4 border-b border-outline/20">
