@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import ogImage from "@/assets/Profile.png";
 
 interface SEOProps {
   title: string;
@@ -22,7 +21,8 @@ export function SEO({
   const siteUrl = "https://jbrandtech.com";
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : undefined;
-  const ogImageUrl = image || ogImage;
+  const defaultOgImage = `${siteUrl}/og-image.png`;
+  const ogImageUrl = image || defaultOgImage;
 
   return (
     <Helmet>

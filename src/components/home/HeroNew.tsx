@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Shield, FileText, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 const trustBadges = [
   { icon: Shield, label: "Security-first design" },
@@ -10,6 +11,12 @@ const trustBadges = [
 ];
 
 export function HeroNew() {
+  const prefersReducedMotion = useReducedMotion();
+  
+  const animationProps = prefersReducedMotion
+    ? { initial: { opacity: 1 }, animate: { opacity: 1 }, transition: { duration: 0 } }
+    : {};
+
   return (
     <section className="relative min-h-[85vh] flex items-center overflow-hidden">
       {/* Animated Background */}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import {
   Cloud,
   Shield,
@@ -80,6 +81,11 @@ const outputCards = {
 
 export function PanelShowcase() {
   const [selectedInput, setSelectedInput] = useState<string>("endpoints");
+  const prefersReducedMotion = useReducedMotion();
+  
+  const springTransition = prefersReducedMotion
+    ? { duration: 0 }
+    : { type: "spring", damping: 20, stiffness: 300 };
 
   return (
     <section className="py-16 lg:py-24 bg-surface">

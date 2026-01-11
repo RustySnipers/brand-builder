@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 export function ArchitectureDiagram() {
+  const prefersReducedMotion = useReducedMotion();
+  
+  const fadeIn = prefersReducedMotion
+    ? { initial: { opacity: 1 }, animate: { opacity: 1 }, transition: { duration: 0 } }
+    : {};
   return (
     <div className="w-full max-w-4xl mx-auto">
       <svg
