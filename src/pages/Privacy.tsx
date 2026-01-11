@@ -1,9 +1,9 @@
-import { Layout } from "@/components/layout/Layout";
+import { AppShell } from "@/components/layout/AppShell";
 import { Helmet } from "react-helmet-async";
 
 export default function Privacy() {
   return (
-    <Layout>
+    <AppShell>
       <Helmet>
         <title>Privacy Policy | J. Brand Technologies</title>
         <meta name="description" content="Privacy policy for J. Brand Technologies. Learn how we collect, use, and protect your information." />
@@ -71,6 +71,6 @@ export default function Privacy() {
           </div>
         </div>
       </section>
-    </Layout>
+    </AppShell>
   );
 }

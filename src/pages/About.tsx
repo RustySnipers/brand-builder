@@ -1,4 +1,4 @@
-import { Layout } from "@/components/layout/Layout";
+import { AppShell } from "@/components/layout/AppShell";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -39,7 +39,7 @@ const expertise = [
 
 export default function About() {
   return (
-    <Layout>
+    <AppShell>
       <Helmet>
         <title>About | J. Brand Technologies</title>
         <meta name="description" content="Learn about Jesse Brand and J. Brand Technologies. Enterprise IT experience delivered with local, personal service in Central Michigan." />
@@ -181,6 +181,6 @@ export default function About() {
           </Button>
         </div>
       </section>
-    </Layout>
+    </AppShell>
   );
 }

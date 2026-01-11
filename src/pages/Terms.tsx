@@ -1,9 +1,9 @@
-import { Layout } from "@/components/layout/Layout";
+import { AppShell } from "@/components/layout/AppShell";
 import { Helmet } from "react-helmet-async";
 
 export default function Terms() {
   return (
-    <Layout>
+    <AppShell>
       <Helmet>
         <title>Terms of Service | J. Brand Technologies</title>
         <meta name="description" content="Terms of service for J. Brand Technologies IT services. Payment terms, scheduling, and service policies." />
@@ -78,6 +78,6 @@ export default function Terms() {
           </div>
         </div>
       </section>
-    </Layout>
+    </AppShell>
   );
 }
