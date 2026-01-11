@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Layout } from "@/components/layout/Layout";
+import { AppShell } from "@/components/layout/AppShell";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -87,7 +87,7 @@ export default function Contact() {
   };
 
   return (
-    <Layout>
+    <AppShell>
       <Helmet>
         <title>Contact | J. Brand Technologies</title>
         <meta name="description" content="Get in touch with J. Brand Technologies for IT support, PC repair, cybersecurity, and managed IT services in Midland, Gladwin, and Clare Counties." />
@@ -334,6 +334,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </Layout>
+    </AppShell>
   );
 }

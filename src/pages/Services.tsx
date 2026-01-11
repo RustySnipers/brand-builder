@@ -1,4 +1,4 @@
-import { Layout } from "@/components/layout/Layout";
+import { AppShell } from "@/components/layout/AppShell";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -54,7 +54,7 @@ const scopeLimits = [
 
 export default function Services() {
   return (
-    <Layout>
+    <AppShell>
       <Helmet>
         <title>IT Services | J. Brand Technologies | Midland, Gladwin & Clare Counties</title>
         <meta name="description" content="PC repair, cybersecurity, and business IT services in Midland, Gladwin, & Clare Counties. Serving the Sanford, MI area with fixed-price residential services and project-based business solutions." />
@@ -199,6 +199,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-    </Layout>
+    </AppShell>
   );
 }

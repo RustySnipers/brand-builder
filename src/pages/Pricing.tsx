@@ -1,4 +1,4 @@
-import { Layout } from "@/components/layout/Layout";
+import { AppShell } from "@/components/layout/AppShell";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -63,7 +63,7 @@ const managedPlans = [
 
 export default function Pricing() {
   return (
-    <Layout>
+    <AppShell>
       <Helmet>
         <title>Pricing | J. Brand Technologies</title>
         <meta name="description" content="Transparent pricing for PC repair, cybersecurity, and managed IT services. Fixed-price residential services starting at $49. Business rates and managed plans available." />
@@ -316,6 +316,6 @@ export default function Pricing() {
           </div>
         </div>
       </section>
-    </Layout>
+    </AppShell>
   );
 }

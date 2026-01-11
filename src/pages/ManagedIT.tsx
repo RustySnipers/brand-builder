@@ -1,4 +1,4 @@
-import { Layout } from "@/components/layout/Layout";
+import { AppShell } from "@/components/layout/AppShell";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -15,7 +15,7 @@ const planFeatures = [
 
 export default function ManagedIT() {
   return (
-    <Layout>
+    <AppShell>
       <Helmet>
         <title>Managed IT Plans | J. Brand Technologies</title>
         <meta name="description" content="Proactive IT management with 24/7 monitoring, automated patching, and enterprise-grade security. Plans starting at $59/device/month." />
@@ -197,6 +197,6 @@ export default function ManagedIT() {
           </Button>
         </div>
       </section>
-    </Layout>
+    </AppShell>
   );
 }
