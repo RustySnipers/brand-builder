@@ -65,8 +65,8 @@ export default function Pricing() {
   return (
     <AppShell>
       <Helmet>
-        <title>Pricing | J. Brand Technologies</title>
-        <meta name="description" content="Transparent pricing for PC repair, cybersecurity, and managed IT services. Fixed-price residential services starting at $49. Business rates and managed plans available." />
+        <title>IT Service Pricing | PC Repair & Managed IT Costs | J. Brand Technologies</title>
+        <meta name="description" content="Transparent IT pricing: PC repair from $49, managed IT from $59/device/month, security audits $499. No hidden fees. Serving Midland, Gladwin & Clare Counties, MI." />
         <link rel="canonical" href="https://jbrandtech.com/pricing" />
       </Helmet>
 
@@ -75,10 +75,10 @@ export default function Pricing() {
         <div className="section-container">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
-              Transparent Pricing
+              Transparent IT Service Pricing
             </h1>
             <p className="text-xl text-primary-foreground/90">
-              No hidden fees. No surprises. Know exactly what you'll pay before we start.
+              No hidden fees. No surprises. Fixed-price PC repair starting at $49. Managed IT from $59/device/month.
             </p>
           </div>
         </div>

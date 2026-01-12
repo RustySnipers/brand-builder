@@ -66,10 +66,10 @@ export default function Services() {
         <div className="section-container">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
-              Our Services
+              IT Services in Midland, Gladwin & Clare Counties
             </h1>
             <p className="text-xl text-primary-foreground/90">
-              Comprehensive technology solutions from quick repairs to ongoing IT management. Transparent pricing, enterprise standards.
+              PC repair, cybersecurity, and business IT solutions. Fixed prices for residential. Project-based for business. Enterprise standards, local service.
             </p>
           </div>
         </div>

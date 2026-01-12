@@ -89,8 +89,8 @@ export default function Contact() {
   return (
     <AppShell>
       <Helmet>
-        <title>Contact | J. Brand Technologies</title>
-        <meta name="description" content="Get in touch with J. Brand Technologies for IT support, PC repair, cybersecurity, and managed IT services in Midland, Gladwin, and Clare Counties." />
+        <title>Contact Us | IT Support in Midland, Gladwin & Clare Counties | J. Brand Technologies</title>
+        <meta name="description" content="Request IT support, PC repair, or cybersecurity services in Central Michigan. Call 989-430-3848 or fill out our contact form. Mon-Fri, 9am-5pm." />
         <link rel="canonical" href="https://jbrandtech.com/contact" />
       </Helmet>
 
@@ -99,10 +99,10 @@ export default function Contact() {
         <div className="section-container">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
-              Get in Touch
+              Request IT Service in Central Michigan
             </h1>
             <p className="text-xl text-primary-foreground/90">
-              Ready to solve your IT challenges? Reach out by phone, email, or fill out the form below.
+              Get help with PC repair, cybersecurity, or managed IT. Serving Midland, Gladwin & Clare Counties.
             </p>
           </div>
         </div>

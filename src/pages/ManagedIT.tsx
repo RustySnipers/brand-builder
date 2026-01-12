@@ -17,8 +17,8 @@ export default function ManagedIT() {
   return (
     <AppShell>
       <Helmet>
-        <title>Managed IT Plans | J. Brand Technologies</title>
-        <meta name="description" content="Proactive IT management with 24/7 monitoring, automated patching, and enterprise-grade security. Plans starting at $59/device/month." />
+        <title>Managed IT Services | 24/7 Monitoring & Support | J. Brand Technologies</title>
+        <meta name="description" content="Proactive IT management for Central Michigan businesses. 24/7 monitoring, auto-patching, security. Plans from $59/device/month. Serving Midland, Gladwin & Clare Counties." />
         <link rel="canonical" href="https://jbrandtech.com/managed-it" />
       </Helmet>
 
@@ -27,10 +27,10 @@ export default function ManagedIT() {
         <div className="section-container">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
-              Managed IT Services
+              Managed IT Services for Central Michigan Businesses
             </h1>
             <p className="text-xl text-primary-foreground/90">
-              Stop reacting to IT problems. Start preventing them. Our managed plans provide proactive monitoring, maintenance, and protection for your systems.
+              Stop reacting to IT problems. Start preventing them. 24/7 monitoring, automated patching, and proactive maintenance from $59/device/month.
             </p>
           </div>
         </div>
