@@ -88,10 +88,10 @@ export function PanelShowcase() {
     : { type: "spring", damping: 20, stiffness: 300 };
 
   return (
-    <section className="py-16 lg:py-24 bg-surface">
+    <section className="py-16 lg:py-24 bg-surface" aria-labelledby="how-we-work-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-display text-3xl lg:text-4xl font-bold text-on-surface mb-4">
+          <h2 id="how-we-work-heading" className="font-display text-3xl lg:text-4xl font-bold text-on-surface mb-4">
             How We Work
           </h2>
           <p className="text-lg text-on-surface-variant max-w-2xl mx-auto">

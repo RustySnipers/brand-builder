@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   Shield,
   Monitor,
@@ -8,8 +8,15 @@ import {
   FileText,
   Zap,
   ArrowUpRight,
+  HelpCircle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 interface BentoItem {
   icon: React.ElementType;
@@ -63,6 +70,25 @@ const bentoItems: BentoItem[] = [
     description: "Custom Python/PowerShell scripts to automate workflows and eliminate repetitive tasks.",
     metric: "Policy-driven",
     href: "/pricing",
+  },
+];
+
+const faqs = [
+  {
+    question: "What areas do you serve?",
+    answer: "We serve homes and businesses in Midland, Gladwin, and Clare Counties in Central Michigan. We're based near Sanford, MI.",
+  },
+  {
+    question: "How quickly can you respond to IT emergencies?",
+    answer: "During business hours (Mon-Fri, 9am-5pm), we typically respond within 1-2 hours. After-hours emergency support is available at our emergency rate ($250/hr).",
+  },
+  {
+    question: "Do you offer free estimates?",
+    answer: "For most services, yes. Our diagnostic fee ($49) covers an initial assessment and is waived if you proceed with repairs. For larger projects, we provide free consultations and quotes.",
+  },
+  {
+    question: "What makes you different from other IT providers?",
+    answer: "You work directly with the owner, Jesse Brand. No account managers, no support tiers, no finger-pointing. Plus, every job is fully documented so you always know what was done.",
   },
 ];
 
@@ -124,9 +150,9 @@ export function BentoGrid() {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <item.icon className="h-6 w-6 text-primary" />
+                    <item.icon className="h-6 w-6 text-primary" aria-hidden="true" />
                   </div>
-                  <ArrowUpRight className="h-5 w-5 text-on-surface-variant opacity-0 group-hover:opacity-100 transform translate-x-1 -translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all" />
+                  <ArrowUpRight className="h-5 w-5 text-on-surface-variant opacity-0 group-hover:opacity-100 transform translate-x-1 -translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all" aria-hidden="true" />
                 </div>
                 
                 <h3 className="text-lg font-semibold text-on-surface mb-2 group-hover:text-primary transition-colors">
@@ -145,6 +171,35 @@ export function BentoGrid() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* FAQ Section */}
+        <div className="mt-16 lg:mt-24">
+          <div className="flex items-center gap-3 mb-8">
+            <HelpCircle className="h-6 w-6 text-primary" aria-hidden="true" />
+            <h2 className="font-display text-2xl lg:text-3xl font-bold text-on-surface">
+              Common Questions
+            </h2>
+          </div>
+          
+          <div className="max-w-3xl">
+            <Accordion type="single" collapsible className="space-y-3">
+              {faqs.map((faq, index) => (
+                <AccordionItem 
+                  key={index} 
+                  value={`faq-${index}`}
+                  className="bg-surface-container border border-outline/20 rounded-xl px-6"
+                >
+                  <AccordionTrigger className="hover:no-underline text-left py-4">
+                    <span className="font-medium text-on-surface">{faq.question}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-on-surface-variant pb-4">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
       </div>
     </section>
   );

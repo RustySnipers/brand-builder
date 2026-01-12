@@ -4,40 +4,63 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>J. Brand Technologies | Managed IT, Cybersecurity & PC Repair</title>
-    <meta name="description" content="Enterprise-grade IT services for homes and small businesses in Midland, Gladwin, and Clare Counties. Managed IT, cybersecurity, and PC repair with transparent pricing." />
+    <title>J. Brand Technologies | Managed IT, Cybersecurity & PC Repair in Central Michigan</title>
+    <meta name="description" content="Enterprise-grade IT services for homes and small businesses in Midland, Gladwin, and Clare Counties, MI. Managed IT, cybersecurity, and PC repair with transparent pricing. Call 989-430-3848." />
     <meta name="author" content="J. Brand Technologies" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1a237e" />
+    
+    <!-- Geo Tags for Local SEO -->
+    <meta name="geo.region" content="US-MI" />
+    <meta name="geo.placename" content="Sanford, Michigan" />
     
     <!-- Open Graph -->
     <meta property="og:title" content="J. Brand Technologies | Enterprise Standards. Local Service." />
-    <meta property="og:description" content="Managed IT, cybersecurity, and PC repair for homes and small businesses in Central Michigan." />
+    <meta property="og:description" content="Managed IT, cybersecurity, and PC repair for homes and small businesses in Central Michigan. Serving Midland, Gladwin & Clare Counties." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jbrandtech.com/" />
+    <meta property="og:image" content="https://jbrandtech.com/og-image.png" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="J. Brand Technologies" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="J. Brand Technologies" />
-    <meta name="twitter:description" content="Enterprise Standards. Local Service. IT support for Central Michigan." />
+    <meta name="twitter:title" content="J. Brand Technologies | Enterprise IT for Central Michigan" />
+    <meta name="twitter:description" content="Enterprise Standards. Local Service. IT support for Midland, Gladwin & Clare Counties." />
+    <meta name="twitter:image" content="https://jbrandtech.com/og-image.png" />
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://jbrandtech.com/" />
     
     <!-- Schema.org LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": "https://jbrandtech.com/#business",
       "name": "J. Brand Technologies",
-      "description": "Managed IT, cybersecurity, and PC repair services for homes and small businesses.",
+      "description": "Managed IT, cybersecurity, and PC repair services for homes and small businesses in Central Michigan.",
+      "url": "https://jbrandtech.com",
       "telephone": "+1-989-430-3848",
       "email": "jesse.h.brand@gmail.com",
+      "image": "https://jbrandtech.com/og-image.png",
+      "logo": "https://jbrandtech.com/favicon.png",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Sanford",
         "addressRegion": "MI",
         "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "43.6764",
+        "longitude": "-84.3783"
+      },
       "areaServed": [
-        { "@type": "County", "name": "Midland County" },
-        { "@type": "County", "name": "Gladwin County" },
-        { "@type": "County", "name": "Clare County" }
+        { "@type": "AdministrativeArea", "name": "Midland County, Michigan" },
+        { "@type": "AdministrativeArea", "name": "Gladwin County, Michigan" },
+        { "@type": "AdministrativeArea", "name": "Clare County, Michigan" }
       ],
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
@@ -45,11 +68,76 @@
         "opens": "09:00",
         "closes": "17:00"
       },
-      "priceRange": "$$",
       "sameAs": [
         "https://www.linkedin.com/in/jesse-h-brand/",
         "https://www.facebook.com/JBrandTechnologies/"
-      ]
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Jesse Brand"
+      }
+    }
+    </script>
+    
+    <!-- Schema.org ITService -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://jbrandtech.com/#service",
+      "name": "J. Brand Technologies",
+      "serviceType": ["Managed IT Services", "Cybersecurity Services", "Computer Repair", "Network Setup", "Cloud Migration"],
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://jbrandtech.com/#business"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Midland County, Michigan" },
+        { "@type": "AdministrativeArea", "name": "Gladwin County, Michigan" },
+        { "@type": "AdministrativeArea", "name": "Clare County, Michigan" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "PC Diagnostic",
+              "description": "Full hardware scan and error log review"
+            },
+            "price": "49.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tech Sentinel Managed IT",
+              "description": "24/7 monitoring, auto-patching, and proactive maintenance"
+            },
+            "price": "59.00",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "59.00",
+              "priceCurrency": "USD",
+              "unitText": "device per month"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Security Audit",
+              "description": "Vulnerability scan, password policy review, 2FA setup, risk report"
+            },
+            "price": "499.00",
+            "priceCurrency": "USD"
+          }
+        ]
+      }
     }
     </script>
     
@@ -58,6 +146,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://jbrandtech.com/#organization",
       "name": "J. Brand Technologies",
       "url": "https://jbrandtech.com",
       "logo": "https://jbrandtech.com/favicon.png",
@@ -67,7 +156,13 @@
         "telephone": "+1-989-430-3848",
         "contactType": "customer service",
         "email": "jesse.h.brand@gmail.com",
-        "availableLanguage": "English"
+        "availableLanguage": "English",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
       },
       "sameAs": [
         "https://www.linkedin.com/in/jesse-h-brand/",
@@ -77,7 +172,22 @@
     </script>
   </head>
   <body>
+    <noscript>
+      <div style="padding: 20px; text-align: center; font-family: system-ui, sans-serif;">
+        <h1>J. Brand Technologies</h1>
+        <p>Enterprise-grade IT services for Central Michigan</p>
+        <p>Call us: <a href="tel:989-430-3848">989-430-3848</a></p>
+        <p>Email: <a href="mailto:jesse.h.brand@gmail.com">jesse.h.brand@gmail.com</a></p>
+        <p>Serving Midland, Gladwin & Clare Counties</p>
+      </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Signal for pre-renderer that page is ready
+      document.addEventListener('DOMContentLoaded', function() {
+        document.dispatchEvent(new Event('render-event'));
+      });
+    </script>
   </body>
 </html>

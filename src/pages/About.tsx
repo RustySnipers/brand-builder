@@ -41,8 +41,8 @@ export default function About() {
   return (
     <AppShell>
       <Helmet>
-        <title>About | J. Brand Technologies</title>
-        <meta name="description" content="Learn about Jesse Brand and J. Brand Technologies. Enterprise IT experience delivered with local, personal service in Central Michigan." />
+        <title>About Jesse Brand | Local IT Expert in Central Michigan | J. Brand Technologies</title>
+        <meta name="description" content="Meet Jesse Brand, owner of J. Brand Technologies. Enterprise IT experience with local, personal service for homes and businesses in Midland, Gladwin & Clare Counties." />
         <link rel="canonical" href="https://jbrandtech.com/about" />
       </Helmet>
 
@@ -51,10 +51,10 @@ export default function About() {
         <div className="section-container">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
-              About J. Brand Technologies
+              Your Local IT Expert in Central Michigan
             </h1>
             <p className="text-xl text-primary-foreground/90">
-              Owner-operated IT services. Enterprise standards. Local accountability.
+              Owner-operated IT services. Enterprise standards. Local accountability. Serving Midland, Gladwin & Clare Counties.
             </p>
           </div>
         </div>
