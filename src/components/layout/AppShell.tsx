@@ -112,10 +112,11 @@ export function AppShell({ children }: AppShellProps) {
         <div className="p-4 border-t border-outline/20">
           {!sidebarCollapsed && (
             <>
-              <div className="text-xs text-on-surface-variant mb-3">
-                <div className="font-medium text-on-surface mb-1">J. Brand Technologies</div>
-                <div>Serving Midland, Gladwin & Clare Counties</div>
-                <div>Sanford, MI Area</div>
+              <div className="text-xs text-on-surface-variant mb-4">
+                <div className="font-semibold text-on-surface mb-2 text-sm">J. Brand Technologies</div>
+                <div className="font-medium text-primary/80 mb-1">Enterprise Standards. Local Service.</div>
+                <div className="leading-relaxed">Proudly serving Midland, Gladwin, and Clare Counties.</div>
+                <div className="mt-1">Sanford, MI Area • 989-430-3848</div>
               </div>
               <div className="flex gap-4 text-xs text-on-surface-variant">
                 {footerLinks.map((link) => (

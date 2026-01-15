@@ -6,58 +6,61 @@
 
 @layer base {
   :root {
-    /* M3 Dark-Intellect Design System */
-    --md-sys-color-primary: 231 88% 62%;
+    /* Tech Sentinel Design System - Deep Indigo Authority */
+    /* Primary: #1a237e = hsl(231, 65%, 30%) */
+    --md-sys-color-primary: 231 65% 45%;
+    --md-sys-color-primary-deep: 231 65% 30%;
     --md-sys-color-on-primary: 0 0% 100%;
-    --md-sys-color-tertiary: 175 97% 69%;
-    --md-sys-color-on-tertiary: 220 15% 4%;
-    --md-sys-color-surface: 220 15% 4%;
-    --md-sys-color-surface-variant: 210 20% 12%;
-    --md-sys-color-on-surface: 210 15% 90%;
-    --md-sys-color-on-surface-variant: 210 10% 70%;
-    --md-sys-color-outline: 174 35% 47%;
-    --md-sys-color-surface-container: 220 15% 8%;
-    --md-sys-color-surface-container-high: 220 15% 14%;
+    --md-sys-color-tertiary: 175 70% 45%;
+    --md-sys-color-on-tertiary: 0 0% 100%;
+    --md-sys-color-surface: 220 20% 6%;
+    --md-sys-color-surface-variant: 220 18% 12%;
+    --md-sys-color-on-surface: 210 15% 95%;
+    --md-sys-color-on-surface-variant: 210 12% 70%;
+    --md-sys-color-outline: 231 40% 50%;
+    --md-sys-color-surface-container: 220 18% 9%;
+    --md-sys-color-surface-container-high: 220 18% 14%;
     
     /* Map to existing Tailwind tokens */
-    --background: 220 15% 4%;
-    --foreground: 210 15% 90%;
-    --card: 220 15% 8%;
-    --card-foreground: 210 15% 90%;
-    --popover: 220 15% 8%;
-    --popover-foreground: 210 15% 90%;
-    --primary: 231 88% 62%;
+    --background: 220 20% 6%;
+    --foreground: 210 15% 95%;
+    --card: 220 18% 9%;
+    --card-foreground: 210 15% 95%;
+    --popover: 220 18% 9%;
+    --popover-foreground: 210 15% 95%;
+    --primary: 231 65% 45%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 20% 12%;
-    --secondary-foreground: 210 15% 90%;
-    --muted: 210 20% 12%;
-    --muted-foreground: 210 10% 60%;
-    --accent: 175 97% 69%;
-    --accent-foreground: 220 15% 4%;
+    --secondary: 220 18% 14%;
+    --secondary-foreground: 210 15% 95%;
+    --muted: 220 18% 14%;
+    --muted-foreground: 210 12% 60%;
+    --accent: 175 70% 45%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 210 15% 20%;
-    --input: 210 15% 20%;
-    --ring: 231 88% 62%;
-    --radius: 0.75rem;
+    --border: 231 30% 25%;
+    --input: 231 30% 25%;
+    --ring: 231 65% 45%;
+    --radius: 0.625rem;
 
-    /* Brand colors */
-    --navy: 215 65% 25%;
-    --navy-light: 215 50% 35%;
-    --navy-dark: 215 70% 18%;
-    --teal: 175 97% 69%;
-    --teal-light: 174 55% 75%;
-    --teal-dark: 174 65% 50%;
+    /* Brand colors - Deep Indigo Authority */
+    --navy: 231 65% 30%;
+    --navy-light: 231 55% 40%;
+    --navy-dark: 231 70% 20%;
+    --teal: 175 70% 45%;
+    --teal-light: 175 55% 60%;
+    --teal-dark: 175 75% 35%;
+    --indigo-deep: 231 65% 30%;
     
     /* Sidebar */
-    --sidebar-background: 220 15% 6%;
-    --sidebar-foreground: 210 15% 90%;
-    --sidebar-primary: 231 88% 62%;
+    --sidebar-background: 220 20% 5%;
+    --sidebar-foreground: 210 15% 95%;
+    --sidebar-primary: 231 65% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 20% 12%;
-    --sidebar-accent-foreground: 210 15% 90%;
-    --sidebar-border: 210 15% 15%;
-    --sidebar-ring: 231 88% 62%;
+    --sidebar-accent: 220 18% 14%;
+    --sidebar-accent-foreground: 210 15% 95%;
+    --sidebar-border: 231 30% 20%;
+    --sidebar-ring: 231 65% 45%;
   }
 }
 
@@ -96,11 +99,11 @@
   .border-outline { border-color: hsl(var(--md-sys-color-outline)); }
 
   .hero-gradient {
-    background: linear-gradient(135deg, hsl(215 65% 25%) 0%, hsl(215 70% 18%) 50%, hsl(174 62% 35%) 100%);
+    background: linear-gradient(135deg, hsl(231 65% 30%) 0%, hsl(231 70% 20%) 50%, hsl(175 70% 30%) 100%);
   }
 
   .cta-gradient {
-    background: linear-gradient(135deg, hsl(174 62% 35%) 0%, hsl(174 65% 28%) 100%);
+    background: linear-gradient(135deg, hsl(175 70% 40%) 0%, hsl(175 75% 30%) 100%);
   }
 
   .card-elevated {

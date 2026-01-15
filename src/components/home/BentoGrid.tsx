@@ -29,26 +29,27 @@ interface BentoItem {
 
 const bentoItems: BentoItem[] = [
   {
-    icon: Monitor,
-    title: "PC Repair & Optimization",
-    description: "Fixed-price diagnostics, tune-ups, virus removal, and hardware upgrades for residential and business systems.",
-    metric: "From $49",
-    href: "/services#pc-repair",
+    icon: Server,
+    title: "Managed IT Services",
+    description: "24/7 monitoring, automated patching, and proactive maintenance for businesses in Midland, Gladwin, and Clare Counties. Prevent downtime before it happens.",
+    metric: "From $59/device",
+    href: "/managed-it",
     span: "wide",
   },
   {
     icon: Shield,
-    title: "Cybersecurity",
-    description: "Security audits, threat remediation, 2FA setup, and enterprise-grade protection.",
-    metric: "Audit-ready",
-    href: "/services#cybersecurity",
+    title: "Cybersecurity Audit",
+    description: "Enterprise-grade security assessments including vulnerability scans, password policy reviews, and 2FA implementation. Business IT support you can trust.",
+    metric: "From $499",
+    href: "/security",
+    span: "tall",
   },
   {
-    icon: Server,
-    title: "Managed IT",
-    description: "24/7 monitoring, automated patching, and proactive maintenance to prevent downtime.",
-    metric: "From $59/device",
-    href: "/managed-it",
+    icon: Monitor,
+    title: "PC Repair Near You",
+    description: "Fixed-price diagnostics, tune-ups, and virus removal. Fast, local PC repair in Central Michigan.",
+    metric: "From $49",
+    href: "/services#pc-repair",
   },
   {
     icon: Cloud,
@@ -117,14 +118,15 @@ const itemVariants = {
 
 export function BentoGrid() {
   return (
-    <section className="py-16 lg:py-24 bg-surface-variant/30">
+    <section className="py-20 lg:py-32 bg-surface-variant/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="font-display text-3xl lg:text-4xl font-bold text-on-surface mb-4">
-            What We Offer
+        <div className="text-center mb-16">
+          <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-4">Our Services</p>
+          <h2 className="font-display text-3xl lg:text-5xl font-bold text-on-surface mb-6">
+            Enterprise Standards. Local Service.
           </h2>
-          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto">
-            Comprehensive technology solutions from quick repairs to ongoing IT management.
+          <p className="text-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
+            Comprehensive technology solutions for homes and businesses in Midland, Gladwin, and Clare Counties. From quick PC repairs to ongoing managed IT services.
           </p>
         </div>
 
@@ -173,7 +175,7 @@ export function BentoGrid() {
         </motion.div>
 
         {/* FAQ Section */}
-        <div className="mt-16 lg:mt-24">
+        <div className="mt-20 lg:mt-32">
           <div className="flex items-center gap-3 mb-8">
             <HelpCircle className="h-6 w-6 text-primary" aria-hidden="true" />
             <h2 className="font-display text-2xl lg:text-3xl font-bold text-on-surface">
