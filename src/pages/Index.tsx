@@ -5,7 +5,6 @@ import { LogoStrip } from "@/components/home/LogoStrip";
 import { MeetTheExpert } from "@/components/home/MeetTheExpert";
 import { PanelShowcase } from "@/components/home/PanelShowcase";
 import { BentoGrid } from "@/components/home/BentoGrid";
-import { TestimonialsSection } from "@/components/TestimonialCard";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "lucide-react";
@@ -24,7 +23,6 @@ const Index = () => {
       <MeetTheExpert />
       <PanelShowcase />
       <BentoGrid />
-      <TestimonialsSection />
 
       {/* CTA Band */}
       <section className="py-24 lg:py-32 bg-gradient-to-br from-[hsl(231,65%,30%)]/20 via-surface to-accent/10">
