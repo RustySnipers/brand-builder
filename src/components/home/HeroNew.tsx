@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Shield, FileText, Lock } from "lucide-react";
+import { ArrowRight, Phone, Shield, FileText, Lock, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import Cover from "@/assets/Cover.png";
@@ -9,6 +9,7 @@ const trustBadges = [
   { icon: Shield, label: "Security-first design" },
   { icon: Lock, label: "Least privilege" },
   { icon: FileText, label: "Fully documented" },
+  { icon: Clock, label: "Mon-Fri, 9am-5pm" },
 ];
 
 export function HeroNew() {
@@ -109,23 +110,6 @@ export function HeroNew() {
                 alt="J. Brand Technologies - Enterprise IT infrastructure and server room"
                 className="relative rounded-xl shadow-2xl border border-outline/20 w-full"
               />
-              
-              {/* Business hours overlay */}
-              <div className="absolute bottom-4 left-4 right-4 bg-surface-container/95 backdrop-blur-sm rounded-lg p-4 border border-outline/20">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-sm text-on-surface-variant">Business Hours</div>
-                    <div className="font-medium text-on-surface">Mon–Fri, 9am–5pm</div>
-                  </div>
-                  <Link 
-                    to="/contact"
-                    className="text-sm font-medium text-primary hover:text-primary/80 transition-colors flex items-center gap-1"
-                  >
-                    Get started
-                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                  </Link>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
