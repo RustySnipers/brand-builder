@@ -25,16 +25,17 @@ const Index = () => {
       <TestimonialsSection />
 
       {/* CTA Band */}
-      <section className="py-16 lg:py-20 bg-gradient-to-br from-primary/20 via-surface to-tertiary/10">
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/20 via-surface to-accent/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl lg:text-4xl font-bold text-on-surface mb-4">
-            Ready to Get Started?
+          <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-4">Get Started Today</p>
+          <h2 className="font-display text-3xl lg:text-5xl font-bold text-on-surface mb-6">
+            Ready for Enterprise-Grade IT?
           </h2>
-          <p className="text-lg text-on-surface-variant mb-4 max-w-2xl mx-auto">
-            Contact us today for a consultation. Transparent pricing, documented processes, security by default.
+          <p className="text-lg text-on-surface-variant mb-4 max-w-2xl mx-auto leading-relaxed">
+            Serving Midland, Gladwin, and Clare Counties with transparent pricing and documented processes.
           </p>
-          <p className="text-sm text-on-surface-variant mb-8">
-            Managed plans include proactive maintenance. Support is billed separately at a discounted $85/hr.
+          <p className="text-sm text-on-surface-variant mb-10">
+            Managed plans include proactive maintenance. Support billed separately at $85/hr.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-on-primary rounded-xl h-12 px-6">
