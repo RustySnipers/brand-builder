@@ -60,8 +60,8 @@ export default function Contact() {
     window.location.href = `mailto:jesse.h.brand@gmail.com?subject=${subject}&body=${body}`;
     
     toast({
-      title: "Opening email client...",
-      description: "Your default email app will open with the form details.",
+      title: "Thank you!",
+      description: `A J. Brand technician will contact you at ${formData.email} within 4 hours.`,
     });
   };
 

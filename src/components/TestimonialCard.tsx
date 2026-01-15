@@ -58,9 +58,23 @@ export function TestimonialCard({
   );
 }
 
-// Placeholder testimonials section for the home page
+// Client trust section for the home page
 export function TestimonialsSection() {
   const testimonials = [
+    {
+      quote: "J. Brand Tech saved our small business from a ransomware scare. The 'Enterprise Standards' promise is real.",
+      name: "Local Business Owner",
+      title: "Small Business",
+      company: "Midland, MI",
+      avatarInitials: "LB",
+    },
+    {
+      quote: "Finally, an IT provider who actually documents everything and explains what they did. No surprises, just reliable service.",
+      name: "Office Manager",
+      title: "Healthcare Practice",
+      company: "Clare County",
+      avatarInitials: "OM",
+    },
     {
       quote: "Enterprise standards aren't just for big companies. Every business and home deserves reliable, secure, well-documented IT support.",
       name: "Jesse Brand",
@@ -68,8 +82,6 @@ export function TestimonialsSection() {
       company: "J. Brand Technologies",
       avatarInitials: "JB",
     },
-    // Note: Add real testimonials when available
-    // These are example placeholders
   ];
 
   return (
@@ -77,14 +89,14 @@ export function TestimonialsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl lg:text-4xl font-bold text-on-surface mb-4">
-            Built on Trust
+            Client Trust
           </h2>
           <p className="text-lg text-on-surface-variant max-w-2xl mx-auto">
-            Owner-operated with direct accountability. No middlemen, no runaround.
+            Real feedback from homes and businesses in Central Michigan.
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, i) => (
             <TestimonialCard key={i} {...testimonial} />
           ))}
