@@ -8,7 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ArrowRight, Clock, CreditCard, Calendar, AlertCircle } from "lucide-react";
+import { ArrowRight, Clock, CreditCard, Calendar, AlertCircle, Check, X, Star } from "lucide-react";
 
 const residentialPricing = [
   { service: "Diagnostic / Bench Fee", price: "$49", note: "Full hardware scan & error log review. Waived if repair approved." },
@@ -23,42 +23,24 @@ const residentialPricing = [
 ];
 
 const businessRates = [
-  { service: "Standard Consulting Rate", price: "$125/hr", note: "1-hour minimum" },
-  { service: "Remote Support Block", price: "$45/15-min", note: "Quick remote fixes" },
-  { service: "Emergency / After-Hours", price: "$250/hr", note: "Weekends, holidays, after 6 PM" },
-  { service: "Managed Plan Support", price: "$85/hr", note: "Discounted for plan holders" },
+  { service: "IT Consulting & Project Labor", price: "$125/hr", note: "Strategic planning, audits, infrastructure reviews. Quoted per project or billed hourly." },
+  { service: "On-Demand Support (Break/Fix)", price: "$125/hr", note: "Standard rate: Mon-Fri, 9am-5pm" },
+  { service: "Emergency / After-Hours", price: "$185/hr", note: "Weekends, holidays, after 5 PM" },
 ];
 
 const projectPricing = [
-  { service: "Network Setup", price: "$750+", note: "Firewall config (Ubiquiti/Meraki), guest WiFi isolation, secure DNS, printer mapping." },
   { service: 'Security Audit ("The Fortress Check")', price: "$499", note: "Vulnerability scan, password policy review, 2FA setup, risk report." },
   { service: "Cloud Migration", price: "$999+", note: "Moving local files to SharePoint/OneDrive/Azure. Includes backup setup." },
   { service: "Automation Script", price: "$500+", note: "Custom Python/PowerShell scripts to automate workflows (e.g., auto-filing invoices)." },
 ];
 
-const managedPlans = [
-  {
-    name: "Tech Sentinel",
-    price: "$59",
-    unit: "/device/month",
-    features: [
-      "RMM agent: auto-patching Windows & apps",
-      "Managed AV: enterprise-grade (client provided)",
-      "Weekly automated log review",
-      "24/7 uptime monitoring",
-      "Firmware management",
-    ],
-    note: "Support is NOT free. Reactive support billed at discounted rate: $85/hr.",
-  },
-  {
-    name: "Server / Network",
-    price: "$150",
-    unit: "/device/month",
-    features: [
-      "Offsite cloud backup management",
-    ],
-    note: "Support is NOT free. Major outages/restores billed at discounted rate: $85/hr.",
-  },
+const planFeatures = [
+  { feature: "Managed Antivirus (EDR)", core: true, premier: true },
+  { feature: "Automated Patch Management", core: true, premier: true },
+  { feature: "Remote Support Access", core: "Standard (Mon-Fri)", premier: "Priority Queue" },
+  { feature: "System Health Reporting", core: "Monthly", premier: "Weekly" },
+  { feature: "RMM Agent (Proactive Maintenance)", core: false, premier: true },
+  { feature: "24/7 Uptime Monitoring", core: false, premier: true },
 ];
 
 export default function Pricing() {
@@ -66,7 +48,7 @@ export default function Pricing() {
     <AppShell>
       <Helmet>
         <title>IT Service Pricing | PC Repair & Managed IT Costs | J. Brand Technologies</title>
-        <meta name="description" content="Transparent IT pricing: PC repair from $49, managed IT from $59/device/month, security audits $499. No hidden fees. Serving Midland, Gladwin & Clare Counties, MI." />
+        <meta name="description" content="Transparent IT pricing: PC repair from $49, managed IT from $45/device/month, security audits $499. No hidden fees. Serving Midland, Gladwin & Clare Counties, MI." />
         <link rel="canonical" href="https://jbrandtech.com/pricing" />
       </Helmet>
 
@@ -78,7 +60,7 @@ export default function Pricing() {
               Transparent IT Service Pricing
             </h1>
             <p className="text-xl text-primary-foreground/90">
-              No hidden fees. No surprises. Fixed-price PC repair starting at $49. Managed IT from $59/device/month.
+              No hidden fees. No surprises. Fixed-price PC repair starting at $49. Managed IT from $45/device/month.
             </p>
           </div>
         </div>
@@ -121,8 +103,8 @@ export default function Pricing() {
         <div className="section-container">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-2">Business Rates</h2>
-              <p className="text-muted-foreground mb-8">Hourly and block rates for business clients</p>
+              <h2 className="text-3xl font-bold text-foreground mb-2">Professional Services</h2>
+              <p className="text-muted-foreground mb-8">Expert support for projects, consulting, and issues outside of managed plans</p>
 
               <div className="bg-card rounded-lg border overflow-hidden">
                 <table className="w-full">
@@ -171,36 +153,72 @@ export default function Pricing() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-2">Managed IT Plans</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Proactive monitoring and maintenance to prevent problems before they happen
+              Our proactive Tech Sentinel plans ensure your systems are secure, up-to-date, and performing optimally. Choose the level of protection that fits your business needs.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {managedPlans.map((plan) => (
-              <div key={plan.name} className="card-elevated p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-2">{plan.name}</h3>
-                <div className="flex items-baseline gap-1 mb-6">
-                  <span className="text-4xl font-bold text-teal">{plan.price}</span>
-                  <span className="text-muted-foreground">{plan.unit}</span>
-                </div>
-                <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2 text-sm">
-                      <svg className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-foreground">{feature}</span>
-                    </li>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-card rounded-lg border overflow-hidden">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b">
+                    <th className="text-left px-6 py-4 font-semibold text-foreground">Feature</th>
+                    <th className="text-center px-6 py-4 bg-muted/30">
+                      <div className="flex flex-col items-center">
+                        <span className="font-semibold text-foreground">Tech Sentinel Core</span>
+                        <span className="text-2xl font-bold text-teal mt-1">$45</span>
+                        <span className="text-sm text-muted-foreground">/device/month</span>
+                        <span className="text-xs text-muted-foreground mt-1">Basic Security & Maintenance</span>
+                      </div>
+                    </th>
+                    <th className="text-center px-6 py-4 bg-primary/5 border-l-2 border-primary">
+                      <div className="flex flex-col items-center">
+                        <div className="flex items-center gap-1 mb-1">
+                          <Star className="h-4 w-4 text-primary fill-primary" />
+                          <span className="text-xs font-medium text-primary uppercase">Recommended</span>
+                        </div>
+                        <span className="font-semibold text-foreground">Tech Sentinel Premier</span>
+                        <span className="text-2xl font-bold text-teal mt-1">$85</span>
+                        <span className="text-sm text-muted-foreground">/device/month</span>
+                        <span className="text-xs text-muted-foreground mt-1">Maximum Uptime & Priority Support</span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y">
+                  {planFeatures.map((row) => (
+                    <tr key={row.feature} className="hover:bg-muted/50 transition-colors">
+                      <td className="px-6 py-4 text-foreground">{row.feature}</td>
+                      <td className="px-6 py-4 text-center bg-muted/30">
+                        {row.core === true ? (
+                          <Check className="h-5 w-5 text-teal mx-auto" />
+                        ) : row.core === false ? (
+                          <X className="h-5 w-5 text-muted-foreground/50 mx-auto" />
+                        ) : (
+                          <span className="text-sm text-muted-foreground">{row.core}</span>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 text-center bg-primary/5 border-l-2 border-primary">
+                        {row.premier === true ? (
+                          <Check className="h-5 w-5 text-teal mx-auto" />
+                        ) : row.premier === false ? (
+                          <X className="h-5 w-5 text-muted-foreground/50 mx-auto" />
+                        ) : (
+                          <span className="text-sm font-medium text-foreground">{row.premier}</span>
+                        )}
+                      </td>
+                    </tr>
                   ))}
-                </ul>
-                <div className="pt-4 border-t">
-                  <p className="text-xs text-muted-foreground flex items-start gap-2">
-                    <AlertCircle className="h-4 w-4 flex-shrink-0 mt-0.5" />
-                    {plan.note}
-                  </p>
-                </div>
-              </div>
-            ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20">
+              <p className="text-sm text-foreground flex items-start gap-2">
+                <Star className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                <span><strong>Recommendation:</strong> Tech Sentinel Premier is strongly recommended for servers and critical workstations where downtime directly impacts revenue.</span>
+              </p>
+            </div>
           </div>
 
           <div className="text-center mt-8">
@@ -217,7 +235,7 @@ export default function Pricing() {
       {/* Policies */}
       <section className="py-16 lg:py-24 bg-muted">
         <div className="section-container">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Policies & Terms</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8">Policies & Terms of Service</h2>
 
           <div className="max-w-3xl">
             <Accordion type="single" collapsible className="space-y-4">
@@ -225,15 +243,15 @@ export default function Pricing() {
                 <AccordionTrigger className="hover:no-underline">
                   <div className="flex items-center gap-3">
                     <CreditCard className="h-5 w-5 text-primary" />
-                    <span className="font-semibold">Payment Terms</span>
+                    <span className="font-semibold">1. Payment Terms</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-6">
-                  <ul className="space-y-2">
-                    <li><strong>Hardware/Parts:</strong> 100% upfront. No exceptions.</li>
-                    <li><strong>Residential labor:</strong> Due upon completion/pickup.</li>
-                    <li><strong>Business projects:</strong> 50% deposit, 50% upon completion.</li>
-                    <li><strong>Retainers:</strong> Credit card auto-pay only (Stripe/QuickBooks).</li>
+                  <ul className="space-y-3">
+                    <li><strong>Managed Services (Autopay):</strong> To ensure continuous service and security protection, all Tech Sentinel managed service plans require a valid credit card or bank account on file. Billing is processed automatically via Stripe on the 1st of every month.</li>
+                    <li><strong>One-Time & Project Fees:</strong> Invoices for hourly labor, consulting projects, or hardware are due upon receipt. We accept payment via Stripe (Credit Card/ACH) or Cash.</li>
+                    <li><strong>Late Payments:</strong> Invoices unpaid after 15 days are subject to a 5% late fee. Services may be suspended for accounts more than 30 days past due.</li>
+                    <li><strong>Hardware Procurement:</strong> All hardware orders require 100% payment upfront before procurement.</li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -242,14 +260,14 @@ export default function Pricing() {
                 <AccordionTrigger className="hover:no-underline">
                   <div className="flex items-center gap-3">
                     <Calendar className="h-5 w-5 text-primary" />
-                    <span className="font-semibold">Scheduling</span>
+                    <span className="font-semibold">2. Scheduling & Availability</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-6">
-                  <ul className="space-y-2">
-                    <li><strong>Business hours:</strong> Monday–Friday, 9am–5pm (strictly enforced).</li>
-                    <li><strong>Project work:</strong> Scheduled in blocks. No drop-ins.</li>
-                    <li><strong>After-hours:</strong> Available at emergency rate ($250/hr).</li>
+                  <ul className="space-y-3">
+                    <li><strong>Standard Business Hours:</strong> Monday through Friday, 9:00 AM to 5:00 PM EST.</li>
+                    <li><strong>Service Windows:</strong> Scheduled maintenance, patching, and non-emergency updates are performed during standard business hours unless explicitly arranged otherwise.</li>
+                    <li><strong>Cancellations:</strong> We request at least 24 hours' notice for cancellations of scheduled onsite visits. Missed appointments or cancellations made with less than 24 hours' notice may be subject to a cancellation fee equal to one (1) billable hour.</li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -258,17 +276,15 @@ export default function Pricing() {
                 <AccordionTrigger className="hover:no-underline">
                   <div className="flex items-center gap-3">
                     <Clock className="h-5 w-5 text-primary" />
-                    <span className="font-semibold">Managed Plan Support</span>
+                    <span className="font-semibold">3. Managed Plan Support</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-6">
-                  <p className="mb-4">
-                    <strong>Important:</strong> Support is NOT included free with managed plans. This prevents abuse and ensures quality service.
-                  </p>
-                  <ul className="space-y-2">
-                    <li>Managed plan holders receive a <strong>discounted support rate of $85/hr</strong> (vs. $125/hr standard).</li>
-                    <li>This applies to troubleshooting calls, on-site visits, and major issue resolution.</li>
-                    <li>Proactive monitoring, patching, and automated maintenance ARE included in the plan.</li>
+                  <ul className="space-y-3">
+                    <li><strong>Coverage:</strong> Tech Sentinel plans cover the implementation and management of the specific monitoring and security tools defined in your tier.</li>
+                    <li><strong>Remote-First Approach:</strong> To provide the fastest resolution and keep costs efficient, we utilize secure remote support tools for the majority of tickets.</li>
+                    <li><strong>Onsite Visits:</strong> Onsite support visits are billed at the standard hourly rate unless defined otherwise in a specific project agreement.</li>
+                    <li><strong>Remediation:</strong> Issues identified by monitoring (e.g., virus removal, hardware failure, OS corruption) are billed at the standard hourly rate for remediation, though Premier clients receive priority scheduling.</li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -277,15 +293,14 @@ export default function Pricing() {
                 <AccordionTrigger className="hover:no-underline">
                   <div className="flex items-center gap-3">
                     <AlertCircle className="h-5 w-5 text-primary" />
-                    <span className="font-semibold">Scope Limits</span>
+                    <span className="font-semibold">4. Scope Limits</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-6">
-                  <p className="mb-4">To maintain quality and focus, we do not offer:</p>
-                  <ul className="space-y-2">
-                    <li><strong>Custom app development:</strong> Scripts/automation only, not full software applications.</li>
-                    <li><strong>Web hosting:</strong> We can set up GoDaddy/Squarespace; we do not host on our servers.</li>
-                    <li><strong>Printer hardware repair:</strong> Software/drivers only; if physically broken, we recommend replacement.</li>
+                  <ul className="space-y-3">
+                    <li><strong>Third-Party Vendors:</strong> We act as your knowledgeable advocate with third-party vendors (ISPs, software providers), but we cannot guarantee the uptime, performance, or support responsiveness of third-party services.</li>
+                    <li><strong>Data Liability:</strong> J. Brand Technologies employs industry-standard security and backup practices. However, the client is responsible for maintaining redundant, offsite backups. We are not liable for data loss due to catastrophic hardware failure, natural disasters, or cyberattacks beyond our reasonable control.</li>
+                    <li><strong>Right of Refusal:</strong> We reserve the right to refuse service on equipment that is obsolete (End of Life), physically hazardous, or contains illegal content.</li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
