@@ -15,7 +15,6 @@ import {
   Lock,
   Cloud,
   Code,
-  Network,
   Server,
   AlertTriangle,
   ArrowRight
@@ -40,10 +39,8 @@ const securityServices = [
 ];
 
 const businessServices = [
-  { icon: Network, name: "Network Setup", price: "$750+", description: "Firewall config (Ubiquiti/Meraki), guest WiFi isolation, secure DNS, printer mapping." },
   { icon: Cloud, name: "Cloud Migration", price: "$999+", description: "Moving local files to SharePoint/OneDrive/Azure. Includes backup setup." },
   { icon: Code, name: "Automation Script", price: "$500+", description: "Custom Python/PowerShell scripts to automate workflows (e.g., auto-filing invoices)." },
-  { icon: Server, name: "Remote Support Block", price: "$45/15-min", description: "Quick remote-in fixes via TeamViewer/AnyDesk." },
 ];
 
 const scopeLimits = [
@@ -136,11 +133,11 @@ export default function Services() {
         <div className="section-container">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-              <Network className="h-6 w-6 text-primary" />
+              <Server className="h-6 w-6 text-primary" />
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-foreground">Business IT & Networking</h2>
-              <p className="text-muted-foreground">Project-based solutions for growing businesses</p>
+              <h2 className="text-3xl font-bold text-foreground">Business IT Projects</h2>
+              <p className="text-muted-foreground">Project-based solutions for small businesses</p>
             </div>
           </div>
 
