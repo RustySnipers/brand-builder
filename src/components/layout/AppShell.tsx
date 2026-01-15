@@ -15,6 +15,8 @@ import {
   X,
   ChevronLeft,
   Mail,
+  Linkedin,
+  Facebook,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -38,6 +40,11 @@ const navigation = [
 const footerLinks = [
   { name: "Privacy", href: "/privacy" },
   { name: "Terms", href: "/terms" },
+];
+
+const socialLinks = [
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/jesse-h-brand/", icon: Linkedin },
+  { name: "Facebook", href: "https://www.facebook.com/JBrandTechnologies/", icon: Facebook },
 ];
 
 export function AppShell({ children }: AppShellProps) {
@@ -117,6 +124,24 @@ export function AppShell({ children }: AppShellProps) {
                 <div className="font-medium text-primary/80 mb-1">Enterprise Standards. Local Service.</div>
                 <div className="leading-relaxed">Proudly serving Midland, Gladwin, and Clare Counties.</div>
                 <div className="mt-1">Sanford, MI Area • 989-430-3848</div>
+              </div>
+              {/* Social Links */}
+              <div className="flex gap-3 mb-3">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-surface-variant/50 hover:bg-primary/15 text-on-surface-variant hover:text-primary transition-colors"
+                    aria-label={social.name}
+                  >
+                    <social.icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
+              <div className="text-xs text-on-surface-variant mb-2">
+                © 2026 J. Brand Technologies. Serving Central Michigan.
               </div>
               <div className="flex gap-4 text-xs text-on-surface-variant">
                 {footerLinks.map((link) => (
@@ -227,7 +252,25 @@ export function AppShell({ children }: AppShellProps) {
                     <span>jesse.h.brand@gmail.com</span>
                   </a>
                 </div>
-                <div className="flex gap-4 mt-4 text-xs text-on-surface-variant">
+                {/* Social Links */}
+                <div className="flex gap-3 mb-3 mt-3">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-lg bg-surface-variant/50 hover:bg-primary/15 text-on-surface-variant hover:text-primary transition-colors"
+                      aria-label={social.name}
+                    >
+                      <social.icon className="h-4 w-4" />
+                    </a>
+                  ))}
+                </div>
+                <div className="text-xs text-on-surface-variant mb-2">
+                  © 2026 J. Brand Technologies. Serving Central Michigan.
+                </div>
+                <div className="flex gap-4 text-xs text-on-surface-variant">
                   {footerLinks.map((link) => (
                     <Link
                       key={link.name}
