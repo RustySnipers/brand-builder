@@ -21,7 +21,6 @@ const serviceOptions = [
   "Data Recovery",
   "Hardware Upgrade / Install",
   "Security Audit",
-  "Network Setup",
   "Cloud Migration",
   "Managed IT Inquiry",
   "Other",

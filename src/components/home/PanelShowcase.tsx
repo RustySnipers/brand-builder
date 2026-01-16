@@ -24,7 +24,7 @@ interface PanelItem {
 
 const inputItems: PanelItem[] = [
   { id: "endpoints", icon: Laptop, label: "Endpoints", description: "Workstations, laptops, servers" },
-  { id: "network", icon: Cloud, label: "Network", description: "Routers, firewalls, WiFi APs" },
+  { id: "infrastructure", icon: Cloud, label: "Infrastructure", description: "Routers, firewalls, WiFi APs" },
   { id: "logs", icon: FileText, label: "Logs", description: "Event logs, audit trails" },
   { id: "requirements", icon: CheckCircle, label: "Requirements", description: "Your business needs" },
 ];
@@ -36,7 +36,7 @@ const processingSteps = {
     { label: "Policy Enforcement", status: "active" },
     { label: "Documentation", status: "pending" },
   ],
-  network: [
+  infrastructure: [
     { label: "Topology Mapping", status: "complete" },
     { label: "Security Audit", status: "complete" },
     { label: "Configuration Review", status: "active" },
@@ -62,7 +62,7 @@ const outputCards = {
     { icon: AlertTriangle, label: "Issues Found", value: "3", color: "text-amber-400" },
     { icon: FileText, label: "Documented", value: "100%", color: "text-primary" },
   ],
-  network: [
+  infrastructure: [
     { icon: Lock, label: "Firewall Status", value: "Hardened", color: "text-tertiary" },
     { icon: Zap, label: "Performance", value: "Optimized", color: "text-primary" },
     { icon: FileText, label: "Topology Map", value: "Complete", color: "text-tertiary" },

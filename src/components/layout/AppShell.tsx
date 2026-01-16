@@ -8,7 +8,7 @@ import {
   DollarSign,
   Server,
   Shield,
-  Network,
+  Layers,
   User,
   Phone,
   Menu,
@@ -32,7 +32,7 @@ const navigation = [
   { name: "Pricing", href: "/pricing", icon: DollarSign },
   { name: "Managed IT", href: "/managed-it", icon: Server },
   { name: "Security", href: "/security", icon: Shield },
-  { name: "Architecture", href: "/architecture", icon: Network },
+  { name: "Architecture", href: "/architecture", icon: Layers },
   { name: "About", href: "/about", icon: User },
   { name: "Contact", href: "/contact", icon: Phone },
 ];

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Monitor, Network, ArrowRight } from "lucide-react";
+import { Shield, Monitor, Server, ArrowRight } from "lucide-react";
 
 const services = [
   {
@@ -15,7 +15,7 @@ const services = [
     href: "/services#cybersecurity",
   },
   {
-    icon: Network,
+    icon: Server,
     title: "Managed IT",
     description: "24/7 monitoring, automated patching, backup management, and proactive maintenance for worry-free operations.",
     href: "/managed-it",

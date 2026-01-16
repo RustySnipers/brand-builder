@@ -94,14 +94,14 @@ export function ArchitectureDiagram() {
             <text x="130" y="145" fill="hsl(210, 10%, 60%)" fontSize="11" textAnchor="middle">Endpoints & Workstations</text>
           </motion.g>
 
-          {/* Network Infrastructure */}
+          {/* Infrastructure */}
           <motion.g
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
           >
             <rect x="50" y="180" width="160" height="60" rx="12" fill="url(#surfaceGradient)" stroke="hsl(231, 88%, 62%)" strokeWidth="2" />
-            <text x="130" y="205" fill="hsl(210, 15%, 90%)" fontSize="14" fontWeight="600" textAnchor="middle">Network</text>
+            <text x="130" y="205" fill="hsl(210, 15%, 90%)" fontSize="14" fontWeight="600" textAnchor="middle">Infrastructure</text>
             <text x="130" y="225" fill="hsl(210, 10%, 60%)" fontSize="11" textAnchor="middle">Routers & Firewalls</text>
           </motion.g>
 
