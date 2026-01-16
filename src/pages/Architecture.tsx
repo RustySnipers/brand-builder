@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 const dataFlowSteps = [
   {
     title: "Input Collection",
-    description: "We gather information about your devices, network, logs, and requirements through secure discovery processes.",
+    description: "We gather information about your devices, infrastructure, logs, and requirements through secure discovery processes.",
   },
   {
     title: "Analysis & Processing",

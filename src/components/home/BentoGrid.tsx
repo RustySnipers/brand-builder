@@ -32,7 +32,7 @@ const bentoItems: BentoItem[] = [
     icon: Server,
     title: "Managed IT Services",
     description: "24/7 monitoring, automated patching, and proactive maintenance for businesses in Midland, Gladwin, and Clare Counties. Prevent downtime before it happens.",
-    metric: "From $59/device",
+    metric: "From $45/device",
     href: "/managed-it",
     span: "wide",
   },
